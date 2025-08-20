@@ -1,6 +1,6 @@
-import { prisma } from "../models/prisma.js";
+import { prisma } from "../models/prisma.ts";
 
-export async function connectDatabase(): Promise<void> {
+export async function connectDb(): Promise<void> {
   await prisma.$connect();
 }
 

@@ -1,10 +1,10 @@
 import "reflect-metadata";
 import express from "express";
 import cookieParser from "cookie-parser";
-import { config, logger } from "./config/index.js";
+import { config, logger } from "./config/index.ts";
 
-// import { container } from "./di/container.js";
-// import { router } from "./routes/index.js";
+// import { container } from "./di/container.ts";
+// import { router } from "./routes/index.ts;
 
 export async function buildApp() {
   const app = express();

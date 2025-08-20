@@ -1,12 +1,12 @@
-import { buildApp } from "./app.js";
-import { config } from "./config/index.js";
-import { connectDatabase } from "./database/index.js";
-import { gracefulShutdown } from "./utils/shutdown.js";
+import { buildApp } from "./app.ts";
+import { config } from "./config/index.ts";
+import { connectDb } from "./database/index.ts";
+import { gracefulShutdown } from "./utils/shutdown.ts";
 
 (async () => {
   const app = await buildApp();
   try {
-    await connectDatabase();
+    await connectDb();
 
     // Handlers for close the server and db
     gracefulShutdown();

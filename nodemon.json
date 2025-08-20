@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ext": "ts",
   "ignore": ["src/**/*.test.ts", "src/**/*.spec.ts"],
-  "exec": "node --loader esbuild-register/loader -r esbuild-register src/server.ts"
+  "exec": "node --import=esbuild-register src/server.ts"
 }

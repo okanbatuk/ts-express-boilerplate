@@ -1,4 +1,4 @@
-import { disconnectDb } from "../database/index.js";
+import { disconnectDb } from "../database/index.ts";
 
 const state = { handled: false };
 
