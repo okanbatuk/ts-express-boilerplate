@@ -21,6 +21,7 @@ cp .env.example .env
 # 4. DB (SQLite by default)
 npm run db:generate
 npm run db:push          # creates dev.db
+npm run db:migrate       # run migrations (driver-agnostic)
 
 # 5. Dev server
 npm run dev              # nodemon + esbuild-register
