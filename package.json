@@ -2,15 +2,16 @@
   "name": "ts-express-mvc-boilerplate",
   "version": "1.0.0",
   "type": "module",
+  "dbDriver": "prisma",
   "scripts": {
     "dev": "nodemon --exec node --import=esbuild-register src/server.ts",
     "build": "node builder.js",
     "start": "node dist/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "db:generate": "prisma generate --schema=src/database/schema.prisma",
-    "db:push": "prisma db push --schema=src/database/schema.prisma",
-    "db:migrate": "prisma migrate dev --schema=src/database/schema.prisma",
+    "db:generate": "tsx scripts/db.ts generate",
+    "db:push": "tsx scripts/db.ts push",
+    "db:migrate": "tsx scripts/db.ts migrate",
     "prepare": "husky"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "prisma": "^5.19.0",
     "supertest": "^7.0.0",
     "ts-jest": "^29.2.4",
+    "tsx": "^4.20.4",
     "typescript": "^5.5.4"
   }
 }
